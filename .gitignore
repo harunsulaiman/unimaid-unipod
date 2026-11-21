@@ -23,6 +23,7 @@ next-env.d.ts
 *.lh*.log
 *.pem
 Thumbs.db
+vlogin*.log
 
 # debug
 npm-debug.log*

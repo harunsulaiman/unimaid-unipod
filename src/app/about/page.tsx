@@ -14,7 +14,7 @@ import { priorityAreas, positioning } from "@/content";
 export const metadata: Metadata = {
   title: "About the UniPod",
   description:
-    "What the UNDP University Innovation Pod at the University of Maiduguri is, how it relates to the Abdul Samad Rabiu International Centre for Innovation and Entrepreneurship (ASR-iCIE), and the five priority innovation areas it serves.",
+    "What The UNIMAID-UniPod at the University of Maiduguri is, how it relates to the Abdul Samad Rabiu International Centre for Innovation and Entrepreneurship (ASR-iCIE), and the five priority innovation areas it serves.",
   alternates: { canonical: "/about" },
 };
 
@@ -32,7 +32,7 @@ export default function AboutPage() {
             <span className="font-serif font-normal italic text-gradient-ember">North-East.</span>
           </>
         }
-        lead="The UNDP University Innovation Pod at the University of Maiduguri is one of the pods created under UNDP's pan-African timbuktoo Initiative, in partnership with the Federal Government of Nigeria and the University. It operates inside the ASR-iCIE complex and exists for one purpose: turning ideas into tested, working prototypes."
+        lead="The UNIMAID-UniPod at the University of Maiduguri is one of the pods created under UNDP's pan-African timbuktoo Initiative, in partnership with the Federal Government of Nigeria and the University. It operates inside the ASR-iCIE complex and exists for one purpose: turning ideas into tested, working prototypes."
       >
         <dl className="grid max-w-3xl grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-4">
           {[

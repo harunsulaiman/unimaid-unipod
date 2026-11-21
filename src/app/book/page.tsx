@@ -11,7 +11,7 @@ import { site } from "@/config/site";
 export const metadata: Metadata = {
   title: "Book a Lab or Workbench",
   description:
-    "Book a lab or workbench at the UNDP UniPod, University of Maiduguri. Four steps: select your lab and slot, submit project and institutional details, complete the safety check, and collect your access pass from a UniPod technician.",
+    "Book a lab or workbench at the UNIMAID-UniPod, University of Maiduguri. Four steps: select your lab and slot, submit project and institutional details, complete the safety check, and collect your access pass from a UniPod technician.",
   alternates: { canonical: "/book" },
 };
 
@@ -99,8 +99,8 @@ export default function BookPage() {
             <div>
               <SectionHeading
                 eyebrow="What's available"
-                title="Pick your zone."
-                lead="Availability varies by machine. If your work needs more than one zone, name the primary lab and list the rest in your project description."
+                title="Pick your space."
+                lead="Availability varies by machine. If your work needs more than one space, name the primary lab and list the rest in your project description."
               />
               <ul className="mt-8 space-y-3">
                 {allLabs.map((lab) => (

@@ -1,10 +1,11 @@
-# UNDP UniPod — University of Maiduguri
+# UNIMAID-UniPod — University of Maiduguri
 
-Production website for the **UNDP University Innovation Pod (UniPod)** at the University of
+Production website for the **University Innovation Pod (UNIMAID-UniPod)** at the University of
 Maiduguri, housed inside the **Abdul Samad Rabiu International Centre for Innovation and
 Entrepreneurship (ASR-iCIE)**.
 
-**Live URL (assumed):** https://unipod.unimaid.edu.ng
+**Live URL (assumed):** https://unipod.unimaid.edu.ng — overridable per deployment with
+`NEXT_PUBLIC_SITE_URL`.
 
 ## The institutional relationship (read this before editing copy)
 
@@ -12,7 +13,7 @@ Two distinct things share one building. Never conflate them:
 
 | Entity | What it is | Institutional role |
 | --- | --- | --- |
-| **UNDP UniPod** | Design, prototyping, makerspace and venture-incubation facility, created under UNDP's pan-African **timbuktoo Initiative** in partnership with the Federal Government of Nigeria and UNIMAID | Equipment, makerspace standards, timbuktoo frameworks, pan-African linkages |
+| **UNIMAID-UniPod** | Design, prototyping, makerspace and venture-incubation facility, created under UNDP's pan-African **timbuktoo Initiative** in partnership with the Federal Government of Nigeria and UNIMAID | Equipment, makerspace standards, timbuktoo frameworks, pan-African linkages |
 | **ASR-iCIE** | The Abdul Samad Rabiu International Centre for Innovation and Entrepreneurship — the host edifice/convening complex, built with an ASR Africa ₦1B grant | The physical building the UniPod operates inside |
 
 Editorial rules enforced in the copy and structured data:
@@ -100,24 +101,66 @@ Allowed `form` values: `membership`, `contact`, `partner`, `volunteer`, `booking
 Responses: `200` accepted · `422` validation (name/email) · `400` unknown form or bad JSON ·
 `413` payload too large · `429` rate limited (6 submissions per IP per 10 minutes).
 
-Delivery: set `FORM_WEBHOOK_URL` to POST submissions onward (Slack relay, Formspree, Google
-Apps Script, etc.). With no webhook configured, submissions are logged with `console.info` so
-nothing is silently lost.
+Delivery (both optional, both attempted in parallel, neither fails the request):
+
+| Env var | Effect |
+| --- | --- |
+| `RESEND_API_KEY` + `FORM_EMAIL_TO` | Emails the submission via Resend (`FORM_EMAIL_FROM` sets the sender; `reply_to` is the submitter) |
+| `FORM_WEBHOOK_URL` | POSTs the JSON submission to a Slack relay, Zapier, n8n, Google Apps Script, etc. |
+
+With neither configured, submissions are logged with `console.info` so nothing is silently lost.
+
+Validation and normalisation live in `src/lib/forms.ts` (`parseSubmission`) so the route handler and
+the test suite enforce exactly the same rules — field length caps, a 24-field cap, control-character
+stripping, the honeypot, and the `fullName`/`email` requirements.
+
+`GET /api/health` returns `{ "ok": true, ... }` for uptime monitors.
 
 ```bash
 cp .env.example .env.local
 # NEXT_PUBLIC_SITE_URL=https://unipod.unimaid.edu.ng
 # FORM_WEBHOOK_URL=
+# RESEND_API_KEY=
+# FORM_EMAIL_TO=
 ```
 
 ## Commands
 
 ```bash
-npm run dev        # local development
-npm run typecheck  # tsc --noEmit
-npm run lint       # next lint
-npm run build      # production build
+npm run dev # local development
+npm run typecheck # tsc --noEmit (app + tests)
+npm run lint # next lint
+npm run test # node --test, forms API unit tests
+npm run verify # typecheck + lint + test
+npm run build # production build
 ```
+
+## Deploying
+
+### Vercel
+
+1. Push to GitHub at `harunsulaiman/unimaid-unipod`.
+2. Import the repo at <https://vercel.com/new>. The framework is auto-detected; `vercel.json` pins the build and install commands, the `iad1` region and the security headers.
+3. Add environment variables under Project Settings, Environment Variables: `NEXT_PUBLIC_SITE_URL` set to the production origin, plus optionally `RESEND_API_KEY`, `FORM_EMAIL_TO`, `FORM_EMAIL_FROM` and `FORM_WEBHOOK_URL`.
+4. Pushes to `master` deploy to production; every other branch gets a preview URL.
+
+Or from the CLI:
+
+```bash
+npx vercel link
+npx vercel env add NEXT_PUBLIC_SITE_URL production
+npx vercel --prod
+```
+
+### Custom domain
+
+`unipod.unimaid.edu.ng` is a subdomain of `unimaid.edu.ng`, so UNIMAID ICT needs to add a DNS record:
+
+| Type | Host | Value |
+| --- | --- | --- |
+| CNAME | `unipod` | `cname.vercel-dns.com` |
+
+Then add the domain in Vercel under Settings, Domains, and set `NEXT_PUBLIC_SITE_URL` to match. Otherwise canonical URLs, `sitemap.xml`, `robots.txt` and Open Graph tags keep pointing at the old origin.
 
 ---
 

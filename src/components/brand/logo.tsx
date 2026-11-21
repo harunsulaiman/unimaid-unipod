@@ -37,7 +37,7 @@ export function Logo({ compact = false }: { compact?: boolean }) {
       {!compact && (
         <span className="flex flex-col leading-none">
           <span className="font-display text-[0.94rem] font-semibold tracking-tight text-sand-50">
-            UNDP <span className="font-serif italic text-ember-300">UniPod</span>
+            UNIMAID-<span className="font-serif italic text-ember-300">UniPod</span>
           </span>
           <span className="mt-1 font-mono text-[0.5625rem] uppercase tracking-[0.24em] text-sand-400">
             UNIMAID · ASR-iCIE

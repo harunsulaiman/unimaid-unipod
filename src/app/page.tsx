@@ -30,11 +30,11 @@ export default function HomePage() {
             eyebrow="Makerspaces & labs"
             title={
               <>
-                Seven technical zones,{" "}
+                Seven technical spaces,{" "}
                 <span className="font-serif font-normal italic text-gradient-ember">inside one building.</span>
               </>
             }
-            lead={`Every zone is operated by the ${site.name} team with published access tiers, safety inductions and technician cover. Pick the one your prototype needs.`}
+            lead={`Every space is operated by the ${site.name} team with published access tiers, safety inductions and technician cover. Pick the one your prototype needs.`}
           />
         </Reveal>
         <LabGrid limit={4} />

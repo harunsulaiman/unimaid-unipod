@@ -10,7 +10,7 @@ import { site } from "@/config/site";
 export const metadata: Metadata = {
   title: "Visit & Access",
   description:
-    "How to reach the UNDP UniPod inside the ASR-iCIE complex at the University of Maiduguri, opening hours, access tiers, safety induction and group visits.",
+    "How to reach the UNIMAID-UniPod inside the ASR-iCIE complex at the University of Maiduguri, opening hours, access tiers, safety induction and group visits.",
   alternates: { canonical: "/visit" },
 };
 

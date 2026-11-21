@@ -1,7 +1,7 @@
 /**
  * UniPod content layer.
  *
- * Editorial rule for this file: the UNDP University Innovation Pod (UniPod) is the
+ * Editorial rule for this file: The UNIMAID-UniPod (UniPod) is the
  * makerspace and prototyping facility. The Abdul Samad Rabiu International Centre for
  * Innovation and Entrepreneurship (ASR-iCIE) is the edifice that houses it. Never
  * describe the UniPod as ASR-iCIE, and never describe ASR-iCIE as UNDP-funded — ASR
@@ -15,13 +15,13 @@ export type Stat = { value: string; label: string; detail?: string };
 
 export const heroStats: Stat[] = [
   { value: "7", label: "Technical labs & studios", detail: "inside the ASR-iCIE complex" },
-  { value: "5", label: "Priority innovation areas", detail: "for North-East Nigeria" },
+  { value: "2", label: "Seminar & conference spaces", detail: "seminar room and auditorium" },
   { value: "08:00–18:00", label: "Weekday lab hours", detail: "WAT, Monday to Friday" },
-  { value: "Open", label: "Access for UNIMAID", detail: "students, staff & researchers" },
+  { value: "Free", label: "Access by induction", detail: "after safety sign-off" },
 ];
 
 export const stats: Stat[] = [
-  { value: "7", label: "Makerspace zones", detail: "Prototyping, CNC, electronics, energy, agro-tech, fabrication studios, media" },
+  { value: "7", label: "Makerspace spaces", detail: "Prototyping, CNC, electronics, energy, agro-tech, fabrication studios, media" },
   { value: "5", label: "Priority sectors", detail: "Agro-tech, renewable energy, health devices, climate resilience, digital & IoT" },
   { value: "3", label: "Access tiers", detail: "Open access, safety induction required, technician supervised" },
   { value: "2", label: "Convening spaces", detail: "Seminar room and auditorium via the ASR-iCIE complex" },
@@ -30,10 +30,10 @@ export const stats: Stat[] = [
 export const mission = {
   eyebrow: "The mandate",
   title: "Concept to working MVP, inside one building.",
-  body: "The UNDP UniPod at the University of Maiduguri exists to give innovators, students and researchers across North-East Nigeria open, structured access to industrial prototyping tools, design-thinking studios and product-development support. It is not a lecture theatre and not a co-working café — it is a working pod where ideas leave as fabricated, tested, documented prototypes.",
+  body: "The UNIMAID-UniPod at the University of Maiduguri exists to give innovators, students and researchers across North-East Nigeria open, structured access to industrial prototyping tools, design-thinking studios and product-development support. It is not a lecture theatre and not a co-working café — it is a working pod where ideas leave as fabricated, tested, documented prototypes.",
   pillars: [
     {
-      title: "Build for the Lake Chad Basin",
+      title: "Build for the North-East and the Sahel Region",
       body: "Priority problems are set by the region: post-harvest losses, off-grid energy, diagnostic access, water and climate resilience. Briefs start here, not in an imported playbook.",
     },
     {
@@ -62,7 +62,7 @@ export const positioning = {
   lead: "The names are often confused, so we state it plainly: the UniPod is the makerspace, ASR-iCIE is the building it sits in.",
   rows: [
     {
-      name: "UNDP UniPod",
+      name: "UNIMAID-UniPod",
       short: "The makerspace",
       body: "A design, prototyping and venture-incubation facility created under UNDP's pan-African timbuktoo Initiative, in partnership with the Federal Government of Nigeria and the University of Maiduguri.",
       provides: "Technical equipment, global innovation frameworks, makerspace standards, pan-African ecosystem linkages",
@@ -97,12 +97,12 @@ export const leadership: Person[] = [
     org: "University of Maiduguri",
     bio: "Host university leadership. Provides the institutional mandate and governance support that allows the UniPod to operate on campus.",
   },
-  {
-    name: "Miss Elsie Attafuah",
-    role: "Resident Representative in Nigeria",
-    org: "UNDP Nigeria",
-    bio: "Leads UNDP Nigeria's country programme, including the timbuktoo Initiative under which the UniPod is equipped and supported.",
-  },
+  // {
+  //   name: "Miss Elsie Attafuah",
+  //   role: "Resident Representative in Nigeria",
+  //   org: "UNDP Nigeria",
+  //   bio: "Leads UNDP Nigeria's country programme, including the timbuktoo Initiative under which the UniPod is equipped and supported.",
+  // },
 ];
 
 export const timeline = [
@@ -122,15 +122,15 @@ export const timeline = [
     body: "UNDP Nigeria supplies and installs the makerspace equipment — fabrication, CNC, electronics, energy and agro-processing benches — recorded through a formal handover audit.",
   },
   {
-    year: "2025",
-    title: "UniPod labs open to UNIMAID and the North-East",
-    body: "Seven technical zones come online with published access tiers, safety inductions and technician cover, welcoming students, researchers and external innovators.",
-  },
-  {
     year: "2026",
-    title: "Regional challenges and demo days",
-    body: "The UniPod begins hosting UNDP innovation challenges, technical bootcamps and demo days in the ASR-iCIE seminar room and auditorium.",
+    title: "UniPod labs open to UNIMAID and the North-East",
+    body: " technical Labs and Maker Spaces come online with published access tiers, safety inductions and technician cover, welcoming students, researchers and external innovators.",
   },
+  // {
+  //   year: "2026",
+  //   title: "Regional challenges and demo days",
+  //   body: "The UniPod begins hosting UNDP innovation challenges, technical bootcamps and demo days in the ASR-iCIE seminar room and auditorium.",
+  // },
 ];
 
 /* ---------------------------------------------------------------------------------------
@@ -383,7 +383,7 @@ export const labsExtra: Lab[] = [
   },
 ];
 
-/** Ordered catalog of all seven UniPod technical zones. */
+/** Ordered catalog of all seven UniPod technical spaces. */
 export const allLabs: Lab[] = [...labs, ...labsExtra];
 
 /** Shared ASR-iCIE convening spaces available to UniPod programming. */
@@ -735,7 +735,7 @@ export const events: EventItem[] = [
     summary:
       "Every UniPod lab unlocked for one day. Print a part, fire up a bench, meet the technicians, and see what the pod can actually do.",
     description:
-      "One day, all seven technical zones open to walk-ins. Guided tours of the ASR-iCIE complex, live machine demonstrations, safety induction sign-ups and a showcase from teams currently resident in the labs. Bring a sketch, a broken part or nothing at all.",
+      "One day, all seven technical spaces open to walk-ins. Guided tours of the ASR-iCIE complex, live machine demonstrations, safety induction sign-ups and a showcase from teams currently resident in the labs. Bring a sketch, a broken part or nothing at all.",
     status: "upcoming",
     capacity: "Open admission",
   },
@@ -816,7 +816,7 @@ export const events: EventItem[] = [
     type: "Open Day",
     summary: "UNDP equipment formally handed over and the UniPod labs opened for use.",
     description:
-      "The formal milestone marking the handover of UNDP-supplied makerspace equipment and the opening of the seven UniPod technical zones inside the ASR-iCIE complex.",
+      "The formal milestone marking the handover of UNDP-supplied makerspace equipment and the opening of the seven UniPod technical spaces inside the ASR-iCIE complex.",
     status: "past",
   },
   {
@@ -855,13 +855,13 @@ export const posts: Post[] = [
     slug: "unipod-equipment-handover",
     title: "UNDP hands over makerspace equipment to the UNIMAID UniPod",
     excerpt:
-      "Seven technical zones inside the ASR-iCIE complex are now equipped, inducted and open to students, researchers and external innovators.",
+      "Seven technical spaces inside the ASR-iCIE complex are now equipped, inducted and open to students, researchers and external innovators.",
     date: "2025-09-12",
     author: "UniPod Communications",
     category: "Milestone",
     featured: true,
     content: [
-      "The UNDP University Innovation Pod at the University of Maiduguri has taken formal delivery of its makerspace equipment, marking the point at which all seven technical zones inside the Abdul Samad Rabiu International Centre for Innovation and Entrepreneurship (ASR-iCIE) became operational.",
+      "The UNIMAID-UniPod at the University of Maiduguri has taken formal delivery of its makerspace equipment, marking the point at which all seven technical spaces inside the Abdul Samad Rabiu International Centre for Innovation and Entrepreneurship (ASR-iCIE) became operational.",
       "The equipment package covers additive manufacturing and CAD workstations, CNC and metalworking capacity, electronics and embedded systems benches, solar and off-grid energy test rigs, agro-processing machinery, wood and textile fabrication studios, and an audio-visual media studio — delivered under UNDP's pan-African timbuktoo Initiative.",
       "The UniPod operates inside the ASR-iCIE complex, which was constructed through ASR Africa's ₦1 billion grant to the university. The two are distinct: ASR-iCIE is the centre edifice and convening complex; the UniPod is the technical makerspace running within it.",
       "Access tiers, safety inductions and booking procedures are now published, and lab technicians are on the floor during weekday hours.",
@@ -935,7 +935,7 @@ export const postsExtra: Post[] = [
     category: "Story",
     content: [
       "The two names are frequently used interchangeably, so it is worth stating clearly. The Abdul Samad Rabiu International Centre for Innovation and Entrepreneurship — ASR-iCIE — is the purpose-built centre complex on the University of Maiduguri campus, constructed through ASR Africa's ₦1 billion grant. It provides the building, the seminar room and the auditorium.",
-      "The UNDP University Innovation Pod is the technical makerspace operating inside that complex, created under UNDP's pan-African timbuktoo Initiative. It provides the equipment, the makerspace standards and the innovation programming.",
+      "The UNIMAID-UniPod is the technical makerspace operating inside that complex, created under UNDP's pan-African timbuktoo Initiative. It provides the equipment, the makerspace standards and the innovation programming.",
       "The university hosts both and provides the talent, faculty mentorship and governance that make the arrangement work. Three institutions, three distinct contributions, one address.",
     ],
   },
@@ -1008,7 +1008,7 @@ export const tiers: Tier[] = [
     name: "UNIMAID Student",
     price: "Free",
     cadence: "with valid student ID",
-    summary: "Full use of open-access zones and inducted access to every lab on campus.",
+    summary: "Full use of open-access spaces and inducted access to every lab on campus.",
     features: [
       "All open-access studios",
       "Safety induction for machine labs",
@@ -1037,7 +1037,7 @@ export const tiers: Tier[] = [
     cadence: "per project or residency",
     summary: "For North-East founders and enterprises with a product to prototype.",
     features: [
-      "Access to all technical zones",
+      "Access to all technical spaces",
       "Project-scoped consumables",
       "Commercialisation clinic",
       "Venture residency pathway",

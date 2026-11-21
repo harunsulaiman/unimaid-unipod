@@ -10,7 +10,7 @@ import { extraForms } from "@/content/forms";
 export const metadata: Metadata = {
   title: "Get Involved",
   description:
-    "Partner with the UNDP UniPod, sponsor equipment, mentor a cohort or volunteer. Help build North-East Nigeria's innovation economy.",
+    "Partner with the UNIMAID-UniPod, sponsor equipment, mentor a cohort or volunteer. Help build North-East Nigeria's innovation economy.",
   alternates: { canonical: "/get-involved" },
 };
 

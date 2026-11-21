@@ -47,7 +47,7 @@ export function SiteHeader() {
           </p>
           <div className="flex shrink-0 items-center gap-5">
             <span className="font-mono text-[0.5625rem] uppercase tracking-[0.16em] text-sand-400">
-              UNDP timbuktoo · UNIMAID
+              UNIMAID-UniPod · ASR-iCIE
             </span>
             <OperationalStatusPill />
           </div>

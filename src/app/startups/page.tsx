@@ -8,7 +8,7 @@ import { ApplyBlock } from "@/components/sections/apply-block";
 export const metadata: Metadata = {
   title: "Startups & Ventures",
   description:
-    "Prototypes and ventures built inside the UNDP UniPod — cold chain, water, health diagnostics, energy and agro-processing, all made in Maiduguri.",
+    "Prototypes and ventures built inside the UNIMAID-UniPod — cold chain, water, health diagnostics, energy and agro-processing, all made in Maiduguri.",
   alternates: { canonical: "/startups" },
 };
 

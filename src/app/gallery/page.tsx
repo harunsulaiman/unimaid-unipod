@@ -5,7 +5,7 @@ import { GalleryGrid } from "@/components/sections/gallery-grid";
 export const metadata: Metadata = {
   title: "Gallery",
   description:
-    "Inside the UNDP UniPod — prototyping labs, equipment handover, build sprints and demo days at the ASR-iCIE complex, University of Maiduguri.",
+    "Inside the UNIMAID-UniPod — prototyping labs, equipment handover, build sprints and demo days at the ASR-iCIE complex, University of Maiduguri.",
   alternates: { canonical: "/gallery" },
 };
 

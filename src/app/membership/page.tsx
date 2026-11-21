@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Access & Eligibility",
   description:
-    "Who can use the UNDP UniPod, how access tiers work, and how to register for a safety induction before booking machine time at the University of Maiduguri.",
+    "Who can use the UNIMAID-UniPod, how access tiers work, and how to register for a safety induction before booking machine time at the University of Maiduguri.",
   alternates: { canonical: "/membership" },
 };
 

@@ -19,15 +19,15 @@ export function SiteFooter() {
               <span className="sr-only">— home</span>
             </Link>
             <p className="mt-6 text-sm leading-relaxed text-sand-300/85">
-              The UNDP University Innovation Pod at the University of Maiduguri — a prototyping and
+              The UNIMAID-UniPod at the University of Maiduguri — a prototyping and
               venture-incubation makerspace created under UNDP&apos;s timbuktoo Initiative, housed inside the{" "}
               {site.host.name} ({site.host.abbreviation}).
             </p>
 
-            <p className="mt-5 rounded-2xl border border-white/[0.07] bg-white/[0.02] p-4 font-mono text-[0.5625rem] uppercase leading-relaxed tracking-[0.14em] text-sand-400">
+            {/* <p className="mt-5 rounded-2xl border border-white/[0.07] bg-white/[0.02] p-4 font-mono text-[0.5625rem] uppercase leading-relaxed tracking-[0.14em] text-sand-400">
               Delivered by UNDP Nigeria (timbuktoo) with the University of Maiduguri and the Federal
               Government of Nigeria. Hosted at the ASR-iCIE complex, built by ASR Africa.
-            </p>
+            </p> */}
 
             <ul className="mt-7 space-y-3 text-sm text-sand-300/85">
               <li className="flex gap-3">

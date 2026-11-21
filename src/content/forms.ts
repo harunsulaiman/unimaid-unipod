@@ -157,7 +157,7 @@ export const forms = {
   membership: {
     title: "Access & eligibility enquiry",
     description:
-      "Not sure whether you qualify, or which lab you need? Tell us what you want to build and we will point you at the right zone and access tier.",
+      "Not sure whether you qualify, or which lab you need? Tell us what you want to build and we will point you at the right space and access tier.",
     submit: "Send enquiry",
     successTitle: "Enquiry received",
     successBody: "A UniPod coordinator will reply within five working days.",

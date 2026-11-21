@@ -1,28 +1,35 @@
 export type SiteLink = { label: string; href: string; description?: string };
 
 /**
+ * Canonical origin. Set NEXT_PUBLIC_SITE_URL on Vercel for preview deployments so
+ * canonical URLs, the sitemap and Open Graph tags point at the deployment actually
+ * serving the page.
+ */
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://unipod.unimaid.edu.ng").replace(/\/+$/, "");
+
+/**
  * Identity note — the UniPod and ASR-iCIE are two distinct things:
- *   - The UNDP University Innovation Pod (UniPod) is the makerspace / prototyping
+ *   - The UNIMAID-UniPod (UniPod) is the makerspace / prototyping
  *     facility, created under UNDP's pan-African timbuktoo Initiative.
  *   - ASR-iCIE is the host edifice: the Abdul Samad Rabiu International Centre for
  *     Innovation and Entrepreneurship, built with ASR Africa's ₦1B grant.
  * The UniPod operates *inside* ASR-iCIE. Keep that distinction in all copy.
  */
 export const site = {
-  name: "UNDP UniPod",
-  shortName: "UniPod · UNIMAID",
-  legalName: "UNDP University Innovation Pod (UniPod) — University of Maiduguri",
+  name: "UNIMAID-UniPod",
+  shortName: "UNIMAID-UniPod",
+  legalName: "University Innovation Pod (UniPod) — University of Maiduguri",
   host: {
     name: "Abdul Samad Rabiu International Centre for Innovation and Entrepreneurship",
     abbreviation: "ASR-iCIE",
     note: "Housed at the Abdul Samad Rabiu International Centre for Innovation & Entrepreneurship",
     funder: "ASR Africa",
   },
-  tagline: "Prototype here. Build for the Lake Chad Basin.",
+  tagline: "Prototype here. Build for the North-East and the Sahel Region.",
   description:
-    "The UNDP University Innovation Pod (UniPod) at the University of Maiduguri gives students, researchers and innovators across North-East Nigeria open access to industrial prototyping tools, design-thinking studios and product-development support — taking ideas from concept to a working minimum viable product. Hosted inside the Abdul Samad Rabiu International Centre for Innovation and Entrepreneurship (ASR-iCIE).",
+    "The University Innovation Pod (UNIMAID-UniPod) at the University of Maiduguri gives students, researchers and innovators across the North-East and the Sahel Region open access to industrial prototyping tools, design-thinking studios and product-development support — taking ideas from concept to a working minimum viable product. Hosted inside the Abdul Samad Rabiu International Centre for Innovation and Entrepreneurship (ASR-iCIE).",
   founded: 2025,
-  url: "https://unipod.unimaid.edu.ng",
+  url: siteUrl,
   uniurl: "https://www.unimaid.edu.ng",
   undpurl: "https://www.undp.org/nigeria",
   timbuktoourl: "https://timbuktoo.org",
@@ -61,7 +68,7 @@ export const site = {
 export const nav: SiteLink[] = [
   { label: "Overview", href: "/", description: "What the UniPod is and who it serves" },
   { label: "About the UniPod", href: "/about", description: "Mandate, priority areas and leadership" },
-  { label: "Makerspaces & Labs", href: "/facilities", description: "Seven technical zones and what you can build" },
+  { label: "Makerspaces & Labs", href: "/facilities", description: "Seven technical spaces and what you can build" },
   { label: "Book a Lab", href: "/book", description: "Workbench access, safety induction and passes" },
   { label: "Programs & Challenges", href: "/programs", description: "Hackathons, bootcamps and innovation calls" },
   { label: "Visit & Access", href: "/visit", description: "Location, hours, eligibility and tours" },

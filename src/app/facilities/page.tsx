@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Makerspaces & Labs",
   description:
-    "Seven technical zones inside the UNDP UniPod at the University of Maiduguri: prototyping and design, CNC fabrication, electronics and IoT, renewable energy, agro-processing, wood and textiles, and digital media. Each with published equipment, access tier and safety standard.",
+    "Seven technical spaces inside the UNIMAID-UniPod at the University of Maiduguri: prototyping and design, CNC fabrication, electronics and IoT, renewable energy, agro-processing, wood and textiles, and digital media. Each with published equipment, access tier and safety standard.",
   alternates: { canonical: "/facilities" },
 };
 
@@ -32,7 +32,7 @@ export default function FacilitiesPage() {
     <>
       <PageHero
         crumbs={[{ label: "Makerspaces & Labs" }]}
-        eyebrow="Technical zones"
+        eyebrow="technical spaces"
         title={
           <>
             Seven labs. One{" "}
@@ -68,7 +68,7 @@ export default function FacilitiesPage() {
         <Reveal>
           <SectionHeading
             eyebrow="The catalogue"
-            title="Every zone, in detail."
+            title="Every space, in detail."
             lead="Inventory is being reconciled against the official UNDP equipment handover audit. Items marked pending audit are listed as capability categories rather than final model specifications."
           />
         </Reveal>

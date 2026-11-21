@@ -33,12 +33,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
     default: `${site.name} — University of Maiduguri`,
-    template: `%s · ${site.name} · UNIMAID`,
+    template: `%s · ${site.name}`,
   },
   description: site.description,
   applicationName: site.name,
   keywords: [
-    "UNDP UniPod",
+    "UNIMAID-UniPod",
     "University Innovation Pod",
     "timbuktoo Initiative",
     "University of Maiduguri",

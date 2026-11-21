@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Programs",
   description:
-    "Cohorts, fellowships and bootcamps at the UNDP UniPod: UNDP Northeast Nigeria Community Innovation Challenges, Young Africa Innovates, timbuktoo venture calls, technical bootcamps and demo days.",
+    "Cohorts, fellowships and bootcamps at the UNIMAID-UniPod: UNDP Northeast Nigeria Community Innovation Challenges, Young Africa Innovates, timbuktoo venture calls, technical bootcamps and demo days.",
   alternates: { canonical: "/programs" },
 };
 

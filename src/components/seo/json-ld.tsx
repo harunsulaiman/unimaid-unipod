@@ -6,7 +6,7 @@ export function OrganizationJsonLd() {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     name: site.legalName,
-    alternateName: ["UNDP UniPod UNIMAID", "UniPod Maiduguri"],
+    alternateName: ["UNIMAID UniPod", "UniPod Maiduguri"],
     url: site.url,
     logo: `${site.url}/icon.svg`,
     description: site.description,

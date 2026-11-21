@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowDown, MapPin, Wrench } from "lucide-react";
+import { ArrowDown, Wrench } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button";
 import { CountUp } from "@/components/ui/count-up";
 import { SahelBackdrop } from "@/components/visuals/sahel-backdrop";
@@ -13,7 +13,7 @@ export function Hero() {
 
       <div className="container-x relative">
         <div className="flex flex-col items-center text-center">
-          <div className="glass inline-flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 rounded-full py-1.5 pl-2 pr-4 text-xs">
+          {/* <div className="glass inline-flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 rounded-full py-1.5 pl-2 pr-4 text-xs">
             <span className="rounded-full bg-ember-500/15 px-2.5 py-1 font-mono text-[0.625rem] uppercase tracking-[0.16em] text-ember-200">
               UNDP · timbuktoo
             </span>
@@ -21,22 +21,23 @@ export function Hero() {
               <MapPin className="size-3.5" aria-hidden="true" />
               University of Maiduguri · Borno State
             </span>
-          </div>
+          </div> */}
 
           <h1 className="mt-8 max-w-4xl text-balance text-5xl font-semibold leading-[0.98] tracking-[-0.045em] text-sand-50 sm:text-6xl md:text-7xl lg:text-[5rem]">
-            <span className="block text-gradient-sand">Prototype here.</span>
+            <span className="block text-gradient-sand">UNIMAID-UniPod.</span>
             <span className="block">
               Build for the{" "}
               <span className="font-serif font-normal italic tracking-[-0.02em] text-gradient-ember">
-                Lake Chad Basin
+                North-East and the Sahel Region
               </span>
             </span>
           </h1>
 
           <p className="mt-7 max-w-2xl text-pretty text-base leading-relaxed text-sand-300/90 sm:text-lg">
-            The UNDP University Innovation Pod gives students, researchers and innovators across
-            North-East Nigeria open access to industrial prototyping tools, design-thinking studios and
-            product-development support — so ideas move from concept to a working minimum viable product.
+            The UNIMAID-UniPod at the University of Maiduguri gives students, researchers and
+            innovators across the North-East and the Sahel Region open access to industrial prototyping
+            tools, design-thinking studios and product-development support — so ideas move from concept
+            to a working minimum viable product.
           </p>
 
           <p className="mt-5 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs text-sand-400">
@@ -56,12 +57,14 @@ export function Hero() {
               Book a lab or workbench
             </ButtonLink>
             <ButtonLink href="/facilities" size="lg" variant="secondary">
-              <Wrench className="size-4 text-ember-300" aria-hidden="true" />
-              Explore the UniPod labs
+              <span className="inline-flex items-center gap-2">
+                <Wrench className="size-4 shrink-0 text-ember-300" aria-hidden="true" />
+                <span>Explore the UniPod labs</span>
+              </span>
             </ButtonLink>
           </div>
 
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-sand-400">
+<div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-sand-400">
             <span>Free for every UNIMAID student</span>
             <span className="hidden h-1 w-1 rounded-full bg-sand-400/60 sm:block" aria-hidden="true" />
             <span>Equipped by UNDP</span>
@@ -109,7 +112,7 @@ export function Hero() {
 
         <p className="mx-auto mt-14 max-w-3xl text-center text-[0.6875rem] leading-relaxed text-sand-500">
           {site.host.name} ({site.host.abbreviation}) is the host edifice, built through{" "}
-          {site.host.funder}&apos;s ₦1 billion grant. The UNDP UniPod is the makerspace operating inside it.
+          {site.host.funder}&apos;s ₦1 billion grant. The UNIMAID-UniPod is the makerspace operating inside it.
         </p>
       </div>
     </section>

@@ -6,7 +6,7 @@ import { allPosts } from "@/content";
 export const metadata: Metadata = {
   title: "News",
   description:
-    "Commissioning updates, equipment handover milestones, challenge calls and stories from the UNDP UniPod at the University of Maiduguri.",
+    "Commissioning updates, equipment handover milestones, challenge calls and stories from the UNIMAID-UniPod at the University of Maiduguri.",
   alternates: { canonical: "/news" },
 };
 

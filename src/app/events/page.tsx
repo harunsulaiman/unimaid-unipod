@@ -5,7 +5,7 @@ import { EventListing } from "@/components/sections/event-listing";
 export const metadata: Metadata = {
   title: "Events",
   description:
-    "Hackathons, open lab days, demo nights and technical bootcamps at the UNDP UniPod, University of Maiduguri.",
+    "Hackathons, open lab days, demo nights and technical bootcamps at the UNIMAID-UniPod, University of Maiduguri.",
   alternates: { canonical: "/events" },
 };
 

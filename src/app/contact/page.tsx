@@ -9,7 +9,7 @@ import { forms } from "@/content/forms";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact the UNDP UniPod at the University of Maiduguri — lab bookings, safety inductions, partnerships, press and visits.",
+    "Contact the UNIMAID-UniPod at the University of Maiduguri — lab bookings, safety inductions, partnerships, press and visits.",
   alternates: { canonical: "/contact" },
 };
 
@@ -80,7 +80,7 @@ export default function ContactPage() {
             <Reveal delay={140}>
               <div className="overflow-hidden rounded-3xl border border-white/[0.08]">
                 <iframe
-                  title="Map showing the UNDP UniPod inside the ASR-iCIE complex, University of Maiduguri"
+                  title="Map showing the UNIMAID-UniPod inside the ASR-iCIE complex, University of Maiduguri"
                   src={`https://www.openstreetmap.org/export/embed.html?bbox=${site.geo.lng - 0.02}%2C${site.geo.lat - 0.012}%2C${site.geo.lng + 0.02}%2C${site.geo.lat + 0.012}&layer=mapnik`}
                   className="h-64 w-full grayscale-[0.4] contrast-[1.05]"
                   loading="lazy"

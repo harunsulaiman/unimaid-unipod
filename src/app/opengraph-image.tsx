@@ -67,7 +67,7 @@ export default async function OpengraphImage() {
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <span style={{ color: "#f7f1e6", fontSize: 26, fontWeight: 600, letterSpacing: -0.5 }}>
-              UNDP UniPod
+              UNIMAID-UniPod
             </span>
             <span style={{ color: "#8f9aa6", fontSize: 18, letterSpacing: 4, textTransform: "uppercase" }}>
               UNIMAID · ASR-iCIE
@@ -89,7 +89,7 @@ export default async function OpengraphImage() {
               maxWidth: 980,
             }}
           >
-            Prototype here. Build for the Lake Chad Basin.
+            Prototype here. Build for the North-East and the Sahel Region.
           </span>
         </div>
 

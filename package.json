@@ -1,14 +1,19 @@
 {
-  "name": "undp-unipod-unimaid",
+  "name": "unimaid-unipod",
   "version": "2.0.0",
   "private": true,
-  "description": "Official website of the UNDP University Innovation Pod (UniPod) at the University of Maiduguri — housed inside the Abdul Samad Rabiu International Centre for Innovation and Entrepreneurship (ASR-iCIE)",
+  "description": "Official website of the UNIMAID-UniPod (University Innovation Pod) at the University of Maiduguri — housed inside the Abdul Samad Rabiu International Centre for Innovation and Entrepreneurship (ASR-iCIE)",
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/forms.test.ts",
+    "verify": "npm run typecheck && npm run lint && npm run test"
   },
   "dependencies": {
     "clsx": "^2.1.1",

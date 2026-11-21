@@ -24,6 +24,9 @@ next-env.d.ts
 *.pem
 Thumbs.db
 vlogin*.log
+s.log
+s.err.log
+devserver*.log
 
 # debug
 npm-debug.log*

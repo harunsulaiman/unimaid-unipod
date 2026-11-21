@@ -4,7 +4,9 @@ Production website for the **University Innovation Pod (UNIMAID-UniPod)** at the
 Maiduguri, housed inside the **Abdul Samad Rabiu International Centre for Innovation and
 Entrepreneurship (ASR-iCIE)**.
 
-**Live URL (assumed):** https://unipod.unimaid.edu.ng — overridable per deployment with
+**Production:** https://unimaid-unipod.vercel.app
+**Repository:** https://github.com/harunsulaiman/unimaid-unipod
+**Planned custom domain:** https://unipod.unimaid.edu.ng (see Deploying below) — overridable per deployment with
 `NEXT_PUBLIC_SITE_URL`.
 
 ## The institutional relationship (read this before editing copy)
@@ -129,27 +131,27 @@ cp .env.example .env.local
 ```bash
 npm run dev # local development
 npm run typecheck # tsc --noEmit (app + tests)
-npm run lint # next lint
+npm run lint # eslint .
 npm run test # node --test, forms API unit tests
 npm run verify # typecheck + lint + test
 npm run build # production build
+npm run test:smoke # live smoke suite against https://unimaid-unipod.vercel.app
 ```
 
 ## Deploying
 
+**Live now:** https://unimaid-unipod.vercel.app (production, Next.js 15.5.29, project `unimaid-unipod`).
+
 ### Vercel
 
-1. Push to GitHub at `harunsulaiman/unimaid-unipod`.
-2. Import the repo at <https://vercel.com/new>. The framework is auto-detected; `vercel.json` pins the build and install commands, the `cpt1` region and the security headers.
-3. Add environment variables under Project Settings, Environment Variables: `NEXT_PUBLIC_SITE_URL` set to the production origin, plus optionally `RESEND_API_KEY`, `FORM_EMAIL_TO`, `FORM_EMAIL_FROM` and `FORM_WEBHOOK_URL`.
-4. Pushes to `master` deploy to production; every other branch gets a preview URL.
-
-Or from the CLI:
+1. Import the repo at <https://vercel.com/new>. The framework is auto-detected; `vercel.json` pins the build and install commands, the `cpt1` (Africa) region and `next.config.ts` owns the security headers.
+2. Add environment variables under Project Settings, Environment Variables: `NEXT_PUBLIC_SITE_URL` set to the production origin, plus optionally `RESEND_API_KEY`, `FORM_EMAIL_TO`, `FORM_EMAIL_FROM` and `FORM_WEBHOOK_URL`.
+3. Install the Vercel GitHub App (https://github.com/apps/vercel) on the repository to enable push-to-deploy. Until it is installed, deploy from the CLI as below.
 
 ```bash
-npx vercel link
+npx vercel link          # once per clone
 npx vercel env add NEXT_PUBLIC_SITE_URL production
-npx vercel --prod
+npx vercel deploy --prod # ship it
 ```
 
 ### Custom domain
@@ -160,7 +162,7 @@ npx vercel --prod
 | --- | --- | --- |
 | CNAME | `unipod` | `cname.vercel-dns.com` |
 
-Then add the domain in Vercel under Settings, Domains, and set `NEXT_PUBLIC_SITE_URL` to match. Otherwise canonical URLs, `sitemap.xml`, `robots.txt` and Open Graph tags keep pointing at the old origin.
+Then add the domain in Vercel under Settings, Domains, and set `NEXT_PUBLIC_SITE_URL` to `https://unipod.unimaid.edu.ng` so canonical URLs, `sitemap.xml`, `robots.txt` and Open Graph tags follow.
 
 ---
 

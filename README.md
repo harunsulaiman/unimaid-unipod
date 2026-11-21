@@ -140,7 +140,7 @@ npm run build # production build
 ### Vercel
 
 1. Push to GitHub at `harunsulaiman/unimaid-unipod`.
-2. Import the repo at <https://vercel.com/new>. The framework is auto-detected; `vercel.json` pins the build and install commands, the `iad1` region and the security headers.
+2. Import the repo at <https://vercel.com/new>. The framework is auto-detected; `vercel.json` pins the build and install commands, the `fra1` region and the security headers.
 3. Add environment variables under Project Settings, Environment Variables: `NEXT_PUBLIC_SITE_URL` set to the production origin, plus optionally `RESEND_API_KEY`, `FORM_EMAIL_TO`, `FORM_EMAIL_FROM` and `FORM_WEBHOOK_URL`.
 4. Pushes to `master` deploy to production; every other branch gets a preview URL.
 
